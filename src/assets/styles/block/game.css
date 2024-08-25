@@ -1,0 +1,321 @@
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 20px;
+  height: 100%;
+}
+
+.game__left {
+  position: relative;
+  left: -12px; 
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.game__level {
+  position: relative;
+}
+
+.game__level-block {
+  position: relative;
+}
+
+.game__level-img {
+  width: 64px;
+  height: 57px;
+}
+
+.game__level-text {
+  position: relative;
+  top: -42px;
+  left: 26px;
+  font-size: 15px;
+  line-height: 21px;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 2px;
+}
+
+.game__board-left {
+  position: relative;
+  height: auto;
+}
+
+.game__link {
+  position: relative;
+  top: -20px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover .game__back-left {
+    filter: grayscale(0);
+  }
+
+  &:hover .game__text {
+    color: #FFFFFF;
+  }
+}
+
+.game__back-left {
+  filter: grayscale(1);
+}
+
+.game__text {
+  font-size: 8px;
+  line-height: 11px;
+  color: #FFFFFF49;
+  text-align: center;
+}
+
+.game__text_white {
+  color: #FFFFFF;
+}
+
+.game__right {
+  top: 16px;
+  position: relative;
+  right: -12px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.game__board-right {
+  height: auto;
+}
+
+.game__back-right {
+  filter: grayscale(0);
+}
+
+.game__center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game__jackpot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.game__jackpot-img {
+  width: 36px;
+  height: 34px;
+}
+
+.game__jackpot-text {
+  font-size: 15px;
+  line-height: 21px;
+  -webkit-text-fill-color:  #FFE500;
+  -webkit-text-stroke-color: #7E0606;
+  -webkit-text-stroke-width: 2px;
+  margin: 0;
+}
+
+.game__spin-button {
+  position: relative;
+  border: none;
+  background: none;
+}
+
+.game__spin-button-img {
+  width: 180px;
+}
+
+.game__spin-button-block {
+  position: absolute;
+  top: 2px;
+  left: 60px;
+}
+
+.game__spin-button-text {
+  font-size: 30px;
+  line-height: 28px;
+  -webkit-text-fill-color:  #FFFFFF;
+  -webkit-text-stroke-color: #730A2A;
+  -webkit-text-stroke-width: 2px;
+  font-weight: bold;
+}
+
+.game__luck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.game__win {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.game_win-text {
+  font-size: 13px;
+  -webkit-text-fill-color:  #FFE500;
+  -webkit-text-stroke-color: #7E0606;
+  -webkit-text-stroke-width: 2px;
+}
+
+.game__wheel {
+  position: relative;
+  height: 100%;
+  min-height: 308px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__wheel-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border: 6px solid #E32E2E;
+  border-radius: 6px;
+}
+
+.game__indicator {
+  position: absolute;
+  top: calc(50% - 23px);
+  left: 0;
+  width: 38px;
+  z-index: 100;
+}
+
+.game__info {
+  display: block;
+  position: relative;
+  width: 162px;
+  height: 70px;
+}
+
+.game__info-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.game__info-top {
+  position: absolute;
+  top: 4px;
+  left: 42px;
+  width: 78px;
+}
+
+.game__info-light {
+  position: relative;
+  display: block;
+}
+
+.game__data {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.game__lightning {
+  width: 16px;
+}
+
+.game__data-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game__data-title {
+  font-size: 8px;
+  -webkit-text-fill-color:  #FFFFFF;
+  -webkit-text-stroke-color: #875030;
+  -webkit-text-stroke-width: 1px;
+}
+
+.game__middle {
+  position: absolute;
+  top: 34px;
+  left: 10px;
+  z-index: 10;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.game__progress {
+  position: relative;
+  overflow: hidden;
+  width: 141px;
+  height: 12px;
+}
+
+.game__middle-grey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+}
+
+.game__middle-color {
+  position: absolute;
+  top: 0;
+  z-index: 11;
+  border-radius: 6px;
+}
+
+.game__middle-data {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 12;
+}
+
+.game__middle-text {
+  font-size: 8px;
+  color: #FFFFFF;
+}
+
+.game__bottom {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.game__bottom-text {
+  font-size: 8px;
+  color: #FFFFFF;
+}

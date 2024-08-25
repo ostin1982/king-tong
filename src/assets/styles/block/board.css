@@ -1,0 +1,157 @@
+.board {
+  position: relative;
+  width: 100%;
+  height: 69px;
+}
+
+.board__small {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
+
+.board__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.board__card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+  z-index: 10;
+}
+
+.board__left {
+  position: relative;
+  width: 100%;
+  min-width: 54px;
+  max-width: 54px;
+  height: 52px;
+}
+
+.board__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  gap: 8px;
+}
+
+.board__text {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 8px;
+  text-wrap: balance;
+}
+
+.board__text_white {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.board__text_blue {
+  -webkit-text-fill-color: #2E3684;
+  -webkit-text-stroke-color: #FFFAE1;
+  -webkit-text-stroke-width: 1px;
+}
+
+.board__text_green {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 10px;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #0B612F;
+  -webkit-text-stroke-width: 1px;
+}
+
+.board__text_cyan {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 10px;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #2E3684;
+  -webkit-text-stroke-width: 1px;
+}
+
+.board__right {
+  position: relative;
+  width: 100%;
+  min-width: 88px;
+  max-width: 88px;
+  height: 26px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.board__right_check {
+  cursor: auto;
+}
+
+.board__back-small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.board__in-button {
+  position: relative;
+  z-index: 10;
+}
+
+.board__in-button_round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.board__round {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #ffffff;
+}
+
+.board__check {
+  width: 32px;
+}
+
+.board__text-small {
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 2px;
+}
+
+.board__img-squares {
+  position: relative;
+  width: 100%;
+  min-width: 30px;
+  max-width: 30px;
+  height: 33px;
+}
+
+.board__game {
+  position: relative;
+  width: 69px;
+  height: auto;
+}
+
+.board__card-game {
+
+}

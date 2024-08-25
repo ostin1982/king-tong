@@ -1,0 +1,66 @@
+.spins {
+  height: 100%;
+  width: 100%;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content:  start;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.spins:-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.spins__block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px
+}
+
+.spins__title {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.spins__title::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: calc(50% - 50px);
+  height: 2px;
+  background-color: #000000;
+  z-index: -1;
+}
+
+.spins__title::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: calc(50% - 50px);
+  height: 2px;
+  background-color: #000000;
+  z-index: -1;
+}
+
+.spins__box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 12px;
+}

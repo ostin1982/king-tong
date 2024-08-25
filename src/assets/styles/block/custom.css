@@ -1,0 +1,138 @@
+.custom-label {
+  display: block;
+  cursor: pointer;
+  
+
+  & .text-label {
+    background: rgba(37, 43, 108, 0.5);
+    background-image: url('../../images/btn-blue-lang.png');
+  }
+
+  &:hover {
+    & .text-label {
+      background-color: rgba(37, 43, 108, 0.5);
+      background-image: url('../../images/btn-blue-lang.png');
+    }
+  }
+
+  &::before,
+  &::after {
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  & .text-label {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    -webkit-text-fill-color:  #4C56B2;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 2px;
+  }
+
+  & .custom-input {
+    display: none;
+
+    &:checked {
+      & ~ .text-label {
+        -webkit-text-fill-color:  #FFFFFF;
+        -webkit-text-stroke-color: #0B6232;
+        -webkit-text-stroke-width: 1px;
+        background-color: #0B6232;
+        background-image: url('../../images/btn-green-lang.png');
+      }
+    }
+  }
+}
+
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  width: 90px;
+  height: 28px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.button.b2 {
+  border-radius: 2px;
+  background: url('../../images/rectangle-yes_no.png');
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.switch .knobs:before,
+.switch .knobs:after,
+.switch .knobs span {
+  position: absolute;
+  top: 2px;
+  width: 20px;
+  height: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 7px 4px;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+}
+
+.switch .knobs:before {
+  content: "YES";
+  left: 4px;
+  font-size: 11px;
+  -webkit-text-fill-color:  #FFFFFF;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.switch .knobs:after {
+  content: "NO";
+  right: 4px;
+  font-size: 11px;
+  -webkit-text-fill-color:  #4C56B2;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+}
+
+.switch .knobs span {
+  width: 34px;
+  left: 50px;
+  background: url('../../images/rectangle-green.png') no-repeat;
+  z-index: 2;
+}
+
+.switch .checkbox:checked + .knobs span {
+  left: 4px;
+  background: url('../../images/rectangle-blue.png') no-repeat;
+}

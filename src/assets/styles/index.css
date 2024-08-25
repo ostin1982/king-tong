@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Obelix Pro";
+  src: url("../fonts/obelix-pro.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Obelix Pro";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url('block/default.css');
+@import url('block/custom.css');
+@import url('block/button.css');
+@import url('block/header.css');
+@import url('block/center.css');
+@import url('block/board.css');
+@import url('block/spins.css');
+@import url('block/card.css');
+@import url('block/settings.css');
+@import url('block/game.css');
+@import url('block/gameCard.css');
+@import url('block/modal.css');
