@@ -1,7 +1,7 @@
 {
-  "homepage": "https://ostin1982.github.io/king-tong",
   "name": "king-tong",
   "version": "0.1.0",
+  "homepage": "https://ostin1982.github.io/king-tong",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
