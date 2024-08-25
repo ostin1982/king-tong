@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/quesrs" element={<Quesrs />} />
-        <Route path="/codes" element={<Codes />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="https://ostin1982.github.io/king-tong/" element={<HomeScreen />} />
+        <Route path="https://ostin1982.github.io/king-tong/quesrs" element={<Quesrs />} />
+        <Route path="https://ostin1982.github.io/king-tong/codes" element={<Codes />} />
+        <Route path="https://ostin1982.github.io/king-tong/store" element={<Store />} />
+        <Route path="https://ostin1982.github.io/king-tong/settings" element={<Settings />} />
       </Routes>
     </div>
   );
