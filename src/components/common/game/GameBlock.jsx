@@ -8,32 +8,63 @@ import GameCard from "./GameCard";
 const GameBlock = () => {
   return (
     <div className="game">
-      <div className="game__left">
-        <div className="game__level">
-          <div className="game__level-block">
-            <div className="game__level-img">
-              <img className="img" src={require("../../../assets/images/level.png")} alt="back" />
+      <div className="game__big">
+        <div className="game__big-line">
+          <div className="game__level">
+            <div className="game__level-block">
+              <div className="game__level-img">
+                <img className="img" src={require("../../../assets/images/level.png")} alt="back" />
+              </div>
+              <p className="game__level-text">3</p>
             </div>
-            <p className="game__level-text">3</p>
           </div>
+          <BoardGameRight className="game__board-right">
+            <Link to="/settings" className="game__link">
+              <div className="game__back">
+                <img className="img" src={require("../../../assets/images/configuration.png")} alt="back" />
+              </div>
+              <p className="game__text game__text_white">настройки</p>
+            </Link>
+          </BoardGameRight>
         </div>
-        <BoardGameLeft className="game__board-left">
-          <Link to="/" className="game__link">
-            <div className="game__back-left">
-              <img className="img" src={require("../../../assets/images/map.png")} alt="back" />
-            </div>
-            <p className="game__text">карта</p>
-          </Link>
-        </BoardGameLeft>
-        <BoardGameLeft className="game__board-left">
-          <Link to="/" className="game__link">
-            <div className="game__back-left">
-              <img className="img" src={require("../../../assets/images/shop.png")} alt="back" />
-            </div>
-            <p className="game__text">магазин</p>
-          </Link>
-        </BoardGameLeft>
+        <div className="game__big-line">
+          <BoardGameLeft className="game__board-left">
+            <Link to="/" className="game__link">
+              <div className="game__back-left">
+                <img className="img" src={require("../../../assets/images/map.png")} alt="back" />
+              </div>
+              <p className="game__text">карта</p>
+            </Link>
+          </BoardGameLeft>
+          <BoardGameRight className="game__board-right">
+            <Link to="/quesrs" className="game__link">
+              <div className="game__back">
+                <img className="img" src={require("../../../assets/images/book.png")} alt="back" />
+              </div>
+              <p className="game__text game__text_white">квесты</p>
+            </Link>
+          </BoardGameRight>
+        </div>
+        <div className="game__big-line">
+          <BoardGameLeft className="game__board-left">
+            <Link to="/" className="game__link">
+              <div className="game__back-left">
+                <img className="img" src={require("../../../assets/images/shop.png")} alt="back" />
+              </div>
+              <p className="game__text">магазин</p>
+            </Link>
+          </BoardGameLeft>
+          <BoardGameRight className="game__board-right">
+            <Link to="/store" className="game__link">
+              <div className="game__back">
+                <img className="img" src={require("../../../assets/images/raccoon.png")} alt="back" />
+              </div>
+              <p className="game__text game__text_white">пригласить</p>
+            </Link>
+          </BoardGameRight>
+        </div>
       </div>
+
       <div className="game__center">
         <div className="game__jackpot">
           <div className="game__jackpot-img">
@@ -164,32 +195,7 @@ const GameBlock = () => {
           </div>
         </button>
       </div>
-      <div className="game__right">
-        <BoardGameRight className="game__board-right">
-          <Link to="/settings" className="game__link">
-            <div className="game__back">
-              <img className="img" src={require("../../../assets/images/configuration.png")} alt="back" />
-            </div>
-            <p className="game__text game__text_white">настройки</p>
-          </Link>
-        </BoardGameRight>
-        <BoardGameRight className="game__board-right">
-          <Link to="/quesrs" className="game__link">
-            <div className="game__back">
-              <img className="img" src={require("../../../assets/images/book.png")} alt="back" />
-            </div>
-            <p className="game__text game__text_white">квесты</p>
-          </Link>
-        </BoardGameRight>
-        <BoardGameRight className="game__board-right">
-          <Link to="/store" className="game__link">
-            <div className="game__back">
-              <img className="img" src={require("../../../assets/images/raccoon.png")} alt="back" />
-            </div>
-            <p className="game__text game__text_white">пригласить</p>
-          </Link>
-        </BoardGameRight>
-      </div>
+
     </div>
 )}
 

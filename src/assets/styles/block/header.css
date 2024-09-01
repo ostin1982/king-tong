@@ -1,13 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
   padding-left: 10px;
 }
 
 .header__block {
   position: relative;
-  padding: 6px 10px 6px 26px;
+  padding: 8px 10px 8px 26px;
 }
 
 .header__block:first-child {
@@ -25,15 +25,15 @@
 .header__text {
   position: relative;
   font-size: 8px;
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
 }
 
 .header__text::before {
-  content: attr(data-text); 
+  content: attr(data-text);
   position: absolute;
-  left: 0; 
+  left: 0;
   right: 0;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
@@ -43,6 +43,6 @@
   position: absolute;
   top: -4px;
   left: -14px;
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 33px;
 }

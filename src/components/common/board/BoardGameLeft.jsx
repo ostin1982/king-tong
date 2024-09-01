@@ -4,7 +4,7 @@ import classNames from "classnames";
 const BoardGameLeft = ({children, className}) => {
   return (
     <div className={classNames("board__game", className)}>
-      <div className="board__back">
+      <div className="board__back-game">
         <img className="img" src={require("../../../assets/images/blue-background-left.png")} alt="back" />
       </div>
       <div className="board__card-game">

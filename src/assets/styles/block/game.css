@@ -7,38 +7,52 @@
   height: 100%;
 }
 
-.game__left {
+.game__big {
   position: relative;
-  left: -12px; 
+  width: calc(100% + 24px);
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  justify-content: flex-start;
-  height: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.game__big-line {
+  width: calc(100% + 12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: self-end;
+  align-self:flex-end;
+  position: relative;
+  left: 6px;
 }
 
 .game__level {
   position: relative;
+  top: -12px;
 }
 
 .game__level-block {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game__level-img {
   width: 64px;
-  height: 57px;
 }
 
 .game__level-text {
   position: relative;
-  top: -42px;
-  left: 26px;
+  top: -2px;
+  left: -38px;
   font-size: 15px;
   line-height: 21px;
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 2px;
+  font-family: "Obelix Pro";
 }
 
 .game__board-left {
@@ -48,7 +62,7 @@
 
 .game__link {
   position: relative;
-  top: -20px;
+  top: -12px;
   left: 0px;
   display: flex;
   flex-direction: column;
@@ -63,7 +77,7 @@
   }
 
   &:hover .game__text {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -74,23 +88,13 @@
 .game__text {
   font-size: 8px;
   line-height: 11px;
-  color: #FFFFFF49;
+  color: #ffffff49;
   text-align: center;
+  font-family: "Obelix Pro";
 }
 
 .game__text_white {
-  color: #FFFFFF;
-}
-
-.game__right {
-  top: 16px;
-  position: relative;
-  right: -12px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  justify-content: flex-start;
-  height: 100%;
+  color: #ffffff;
 }
 
 .game__board-right {
@@ -102,7 +106,10 @@
 }
 
 .game__center {
-  height: 100%;
+  position: absolute;
+  top: 54px;
+  left: calc(50% - 96px);
+  height: calc(100% - 54px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -118,17 +125,22 @@
 }
 
 .game__jackpot-img {
-  width: 36px;
-  height: 34px;
+  width: 56px;
+  height: 54px;
 }
 
 .game__jackpot-text {
   font-size: 15px;
   line-height: 21px;
-  -webkit-text-fill-color:  #FFE500;
-  -webkit-text-stroke-color: #7E0606;
+  -webkit-text-fill-color: #ffe500;
+  -webkit-text-stroke-color: #7e0606;
   -webkit-text-stroke-width: 2px;
   margin: 0;
+  font-family: "Obelix Pro";
+  font-weight: bold;
+  background: linear-gradient(0deg, rgba(255,231,16,1) 0%, rgba(255,247,204,1) 20%, rgba(255,206,8,1) 60%, rgba(255,184,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .game__spin-button {
@@ -148,12 +160,15 @@
 }
 
 .game__spin-button-text {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 28px;
-  -webkit-text-fill-color:  #FFFFFF;
-  -webkit-text-stroke-color: #730A2A;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #730a2a;
   -webkit-text-stroke-width: 2px;
   font-weight: bold;
+  font-family: "Obelix Pro";
+  position: relative;
+  top: 4px;
 }
 
 .game__luck {
@@ -172,9 +187,10 @@
 
 .game_win-text {
   font-size: 13px;
-  -webkit-text-fill-color:  #FFE500;
-  -webkit-text-stroke-color: #7E0606;
+  -webkit-text-fill-color: #ffe500;
+  -webkit-text-stroke-color: #7e0606;
   -webkit-text-stroke-width: 2px;
+  font-family: "Obelix Pro";
 }
 
 .game__wheel {
@@ -193,7 +209,7 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
-  border: 6px solid #E32E2E;
+  border: 6px solid #e32e2e;
   border-radius: 6px;
 }
 
@@ -216,7 +232,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  
 }
 .game__info-top {
   position: absolute;
@@ -253,9 +268,10 @@
 
 .game__data-title {
   font-size: 8px;
-  -webkit-text-fill-color:  #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #875030;
   -webkit-text-stroke-width: 1px;
+  font-family: "Obelix Pro";
 }
 
 .game__middle {
@@ -301,7 +317,8 @@
 
 .game__middle-text {
   font-size: 8px;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-family: "Obelix Pro";
 }
 
 .game__bottom {
@@ -317,5 +334,6 @@
 
 .game__bottom-text {
   font-size: 8px;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-family: "Obelix Pro";
 }
