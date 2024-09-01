@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/king-tong/static/css/main.ee173e76.css",
-    "main.js": "/king-tong/static/js/main.6fe72671.js",
+    "main.css": "/king-tong/static/css/main.5f783390.css",
+    "main.js": "/king-tong/static/js/main.385cf92e.js",
     "static/media/egypt-back.png": "/king-tong/static/media/egypt-back.ebf1335d83cbf8d9d339.png",
     "static/media/back.png": "/king-tong/static/media/back.66abb9a347b329b0d911.png",
     "static/media/bg-modal.png": "/king-tong/static/media/bg-modal.229ace6a89a90b23c7e5.png",
@@ -10,15 +10,16 @@
     "static/media/card-mushrooms.png": "/king-tong/static/media/card-mushrooms.029b8e1233afa90186bc.png",
     "static/media/card-coin.png": "/king-tong/static/media/card-coin.6ea864d7af748ae1b5ca.png",
     "static/media/obelix-pro.woff": "/king-tong/static/media/obelix-pro.5dd970486f593ca26190.woff",
+    "static/media/obelix-pro-bold.woff": "/king-tong/static/media/obelix-pro-bold.e7d4919f60202d0d71e5.woff",
     "static/media/garbage-barrels.svg": "/king-tong/static/media/garbage-barrels.f4a7ceb989e0e3528f7f1286dcf16b1b.svg",
     "static/media/sound.svg": "/king-tong/static/media/sound.c3e88b2156ce999417c3e5275af74a15.svg",
     "static/media/music.svg": "/king-tong/static/media/music.c2bfd1f8df30fddbca07122186d0a2e8.svg",
     "index.html": "/king-tong/index.html",
-    "main.ee173e76.css.map": "/king-tong/static/css/main.ee173e76.css.map",
-    "main.6fe72671.js.map": "/king-tong/static/js/main.6fe72671.js.map"
+    "main.5f783390.css.map": "/king-tong/static/css/main.5f783390.css.map",
+    "main.385cf92e.js.map": "/king-tong/static/js/main.385cf92e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee173e76.css",
-    "static/js/main.6fe72671.js"
+    "static/css/main.5f783390.css",
+    "static/js/main.385cf92e.js"
   ]
 }
