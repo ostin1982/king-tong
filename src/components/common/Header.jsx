@@ -3,7 +3,7 @@ import { memo } from "react"
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__block">
+      <div className="header__block header__block_right">
         <div className="header__back">
           <img className="img" src={require("../../assets/images/imag-back-1.png")} alt="back" />
         </div>
@@ -12,7 +12,7 @@ const Header = () => {
         </div>
         <p className="header__text">12 444 555 555</p>
       </div>
-      <div className="header__block">
+      <div className="header__block header__block_center">
         <div className="header__back">
           <img className="img" src={require("../../assets/images/imag-back-2.png")} alt="back" />
         </div>
@@ -21,7 +21,7 @@ const Header = () => {
         </div>
         <p className="header__text">555 555</p>
       </div>
-      <div className="header__block">
+      <div className="header__block header__block_left">
         <div className="header__back">
           <img className="img" src={require("../../assets/images/imag-back-3.png")} alt="back" />
         </div>

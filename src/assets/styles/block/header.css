@@ -1,13 +1,25 @@
 .header {
   display: flex;
   justify-content: space-between;
-  gap: 28px;
+  gap: 24px;
   padding-left: 10px;
 }
 
 .header__block {
   position: relative;
   padding: 8px 10px 8px 26px;
+}
+
+.header__block_right {
+  width: auto;
+}
+
+.header__block_center {
+  width: 46px;
+}
+
+.header__block_left {
+  width: 47px;
 }
 
 .header__block:first-child {

@@ -6,7 +6,7 @@ const BoardSandSmall = ({children}) => {
       <div className="board__back">
         <img className="img" src={require("../../../assets/images/board-sand-small.png")} alt="back" />
       </div>
-      <div className="board__card">
+      <div className="board__card board__card_everything">
         { children }
       </div>
     </div>
