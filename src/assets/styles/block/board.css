@@ -1,13 +1,13 @@
 .board {
   position: relative;
   width: 100%;
-  height: 69px;
+  height: 74px;
 }
 
 .board__small {
   position: relative;
   width: 100%;
-  height: 52px;
+  height: 58px;
 }
 
 .board__back {
@@ -31,7 +31,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 10px;
+  width: calc(100% - 28px);
+  left: 14px;
+  top: 8px;
   gap: 10px;
   z-index: 10;
 }
@@ -158,7 +160,4 @@
   position: relative;
   width: 74px;
   height: auto;
-}
-
-.board__card-game {
 }

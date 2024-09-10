@@ -2,10 +2,12 @@
   height: 100%;
   min-height: 62px;
   width: 94px;
-  outline: 6px solid #E32E2E;
+  outline: 6px solid #e32e2e;
   border-radius: 6px;
   position: relative;
   overflow: hidden;
+  transition: 1s;
+  display: block;
 }
 
 .gameCard__bg {
@@ -35,6 +37,10 @@
   width: 23px;
 }
 
+.gameCard__icon_none {
+  display: none;
+}
+
 .gameCard__icon-win {
   width: 56px;
 }
@@ -43,13 +49,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3px
+  gap: 3px;
 }
 
 .gameCard__text {
   font-size: 12px;
-  -webkit-text-fill-color:  #FFFFFF;
-  -webkit-text-stroke-color: #A63C00;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #a63c00;
   -webkit-text-stroke-width: 1px;
 }
 

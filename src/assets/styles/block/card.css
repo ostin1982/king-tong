@@ -1,7 +1,6 @@
 .card {
   position: relative;
   width: 100%;
-  height: 135px;
 }
 
 .card__back {
@@ -29,7 +28,7 @@
 
 .card__spin {
   font-size: 22px;
-  -webkit-text-fill-color: #36BEFE;
+  -webkit-text-fill-color: #36befe;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 2px;
 }
@@ -44,7 +43,7 @@
 
 .card__extra {
   font-size: 10px;
-  -webkit-text-fill-color:  #DA57FF;
+  -webkit-text-fill-color: #da57ff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
 }
@@ -58,8 +57,8 @@
 
 .card__star {
   font-size: 10px;
-  -webkit-text-fill-color:  #FFFFFF;
-  -webkit-text-stroke-color: #0B6232;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke-color: #0b6232;
   -webkit-text-stroke-width: 1px;
 }
 
@@ -73,7 +72,7 @@
 
 .card__coins {
   font-size: 20px;
-  -webkit-text-fill-color:  #FFE500;
+  -webkit-text-fill-color: #ffe500;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 2px;
 }
