@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/king-tong/static/css/main.a8e95d71.css",
-    "main.js": "/king-tong/static/js/main.cab2d999.js",
+    "main.css": "/king-tong/static/css/main.7c545377.css",
+    "main.js": "/king-tong/static/js/main.8210dce8.js",
     "static/media/egypt-back.png": "/king-tong/static/media/egypt-back.ebf1335d83cbf8d9d339.png",
     "static/media/back.png": "/king-tong/static/media/back.66abb9a347b329b0d911.png",
     "static/media/bg-modal.png": "/king-tong/static/media/bg-modal.229ace6a89a90b23c7e5.png",
@@ -15,11 +15,11 @@
     "static/media/sound.svg": "/king-tong/static/media/sound.c3e88b2156ce999417c3e5275af74a15.svg",
     "static/media/music.svg": "/king-tong/static/media/music.c2bfd1f8df30fddbca07122186d0a2e8.svg",
     "index.html": "/king-tong/index.html",
-    "main.a8e95d71.css.map": "/king-tong/static/css/main.a8e95d71.css.map",
-    "main.cab2d999.js.map": "/king-tong/static/js/main.cab2d999.js.map"
+    "main.7c545377.css.map": "/king-tong/static/css/main.7c545377.css.map",
+    "main.8210dce8.js.map": "/king-tong/static/js/main.8210dce8.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e95d71.css",
-    "static/js/main.cab2d999.js"
+    "static/css/main.7c545377.css",
+    "static/js/main.8210dce8.js"
   ]
 }
