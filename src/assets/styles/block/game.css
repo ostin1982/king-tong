@@ -202,6 +202,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .game__wheel-cards {
@@ -214,6 +215,7 @@
   border-radius: 6px;
   height: 342px;
   overflow: hidden;
+  background: #ffe500;
 }
 
 .game__indicator {

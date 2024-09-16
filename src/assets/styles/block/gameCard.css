@@ -1,5 +1,13 @@
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(62px);
+  }
+}
+
 .gameCard {
-  height: 100%;
   min-height: 62px;
   width: 94px;
   outline: 6px solid #e32e2e;
@@ -8,6 +16,15 @@
   overflow: hidden;
   transition: 1s;
   display: block;
+  transition: transform 0.05s ease;
+}
+
+.gameCard_slot {
+  transition: transform 0.05s ease;
+}
+
+.gameCard_scrolling {
+  animation: scroll 0.05s infinite;
 }
 
 .gameCard__bg {
@@ -62,4 +79,28 @@
 .gameCard__text_big {
   font-size: 24px;
   -webkit-text-stroke-width: 2px;
+}
+
+@keyframes goaround {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes stop {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-90px);
+  }
+  75% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(-85px);
+  }
 }

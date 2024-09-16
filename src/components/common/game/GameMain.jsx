@@ -1,30 +1,35 @@
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import GameCard from './GameCard';
 
 const GameMain = ({information}) => {
-  const [cards, setCards] = useState(information);
+  const [scrolling, setScrolling] = useState(false);
+  const [visibleItems, setVisibleItems] = useState([]);
 
-  const spinClick = () => {
-    const spinState = [...cards];
-    const nextCardIdx = spinState
-      .filter((ft) => ft.active === true)
-      .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0))
-      .pop(1).id;
-    
-    spinState.find((f) => f.active === false).pos =
-      Math.min.apply(
-        null,
-        spinState.map((o) => {
-          return o.pos;
-        })
-      ) - 1;
+  useEffect(() => {
+    const initialItems = Array.from({ length: 5 }, (_, i) => information[i % information.length]);
+    setVisibleItems(initialItems);
+  }, []);
 
-    spinState.find((f) => f.active === false).active = true;
-    spinState.find((f) => f.id === nextCardIdx).active = false;
+  const startScrolling = () => {
+    if (scrolling) return; 
+    setScrolling(true);
 
-    setCards(spinState);
+    const interval = setInterval(() => {
+      setVisibleItems((prev) => {
+        const newItems = [...prev.slice(1), information[Math.floor(Math.random() * information.length)]];
+        return newItems;
+      });
+    }, 100);
+
+    setTimeout(() => {
+      clearInterval(interval);
+      const randomStopIndex = Math.floor(Math.random() * information.length);
+      const newItems = [...Array.from({ length: 5 }, (_, i) => information[(randomStopIndex + i) % information.length])];
+      setVisibleItems(newItems);
+      setScrolling(false);
+    }, 1000);
   };
 
   return(
@@ -42,27 +47,24 @@ const GameMain = ({information}) => {
         </div>
         <div className="game__wheel">
           <div className="game__wheel-cards">
-            {cards
-            .filter((f) => f.active === true)
-            .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0))
-            .map((item, index) => {
-              const {imageBg, imageIcon, classIcon, classZero, number, id} = item;
-              return (
-                <GameCard key={index} data={id}>
-                  <div className="gameCard__bg">
-                    <img src={imageBg} alt="" className="img"/>
+          {visibleItems.map((item, index) => {
+            const {imageBg, imageIcon, classIcon, classZero, number} = item;
+            return (
+              <GameCard key={index} className={classNames(`gameCard_slot ${scrolling ? 'gameCard_scrolling' : ''}`)}>
+                <div className="gameCard__bg">
+                  <img src={imageBg} alt="" className="img"/>
+                </div>
+                <div className="gameCard__info">
+                  <div className={classNames(classIcon)}>
+                    <img src={imageIcon} alt="" className="img"/>
                   </div>
-                  <div className="gameCard__info">
-                    <div className={classNames(classIcon)}>
-                      <img src={imageIcon} alt="" className="img"/>
-                    </div>
-                    <div className="gameCard__winning">
-                      <p className={classNames("gameCard__text", classZero)}>{number}</p>
-                    </div>
+                  <div className="gameCard__winning">
+                    <p className={classNames("gameCard__text", classZero)}>{number}</p>
                   </div>
-                </GameCard>
-              )
-            })}
+                </div>
+              </GameCard>
+            )
+          })}
           </div>
           <div className="game__indicator">
             <img src={require('../../../assets/images/indicator.png')} alt="" className="img"/>
@@ -108,7 +110,7 @@ const GameMain = ({information}) => {
           </div>
         </div>
       </div>
-      <button className="game__spin-button" onClick={spinClick}>
+      <button className="game__spin-button" o onClick={startScrolling} disabled={scrolling}>
         <div className="game__spin-button-img">
           <img src={require('../../../assets/images/button.png')} alt="" className="img"/>
         </div>
@@ -121,4 +123,3 @@ const GameMain = ({information}) => {
 }
 
 export default memo(GameMain);
-

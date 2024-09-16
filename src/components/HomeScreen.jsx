@@ -13,7 +13,7 @@ const GameCardInfo = [
     classIcon: 'gameCard__icon',
     id: 1,
     pos: 1,
-    active: true
+    active: true,
   },
   {
     imageBg: require('../assets/images/blue-bg.png'),
@@ -22,7 +22,7 @@ const GameCardInfo = [
     classIcon: 'gameCard__icon',
     id: 2,
     pos: 2,
-    active: true
+    active: true,
   },
   {
     imageBg: require('../assets/images/win-bg.png'),
@@ -30,7 +30,7 @@ const GameCardInfo = [
     classIcon: 'gameCard__icon-win',
     id: 3,
     pos: 3,
-    active: true
+    active: true,
   },
   {
     imageBg: require('../assets/images/red-bg.png'),
@@ -39,7 +39,7 @@ const GameCardInfo = [
     classIcon: 'gameCard__icon_none',
     id: 4,
     pos: 4,
-    active: true
+    active: true,
   },
   {
     imageBg: require('../assets/images/violet-bg.png'),
@@ -48,25 +48,25 @@ const GameCardInfo = [
     classIcon: 'gameCard__icon',
     id: 5,
     pos: 5,
-    active: true
+    active: true,
+  },
+  { 
+    imageBg: require('../assets/images/yellow-bg.png'),
+    imageIcon: require('../assets/images/coin-4.png'),
+    number: '500 X',
+    classIcon: 'gameCard__icon',
+    id: 6,
+    pos: 6,
+    active: false,
   },
   {
     imageBg: require('../assets/images/yellow-bg.png'),
     imageIcon: require('../assets/images/coin-4.png'),
     number: '2500 X',
     classIcon: 'gameCard__icon',
-    id: 6,
-    pos: 6,
-    active: false
-  },
-  {
-    imageBg: require('../assets/images/yellow-bg.png'),
-    imageIcon: require('../assets/images/coin-4.png'),
-    number: '100 X',
-    classIcon: 'gameCard__icon',
     id: 7,
     pos: 7,
-    active: false
+    active: false,
   },
 ];
 
