@@ -10,7 +10,7 @@ const GameMain = ({information}) => {
   useEffect(() => {
     const initialItems = Array.from({ length: 5 }, (_, i) => information[i % information.length]);
     setVisibleItems(initialItems);
-  }, []);
+  }, [information]);
 
   const startScrolling = () => {
     if (scrolling) return; 

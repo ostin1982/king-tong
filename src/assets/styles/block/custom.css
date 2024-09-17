@@ -1,17 +1,16 @@
 .custom-label {
   display: block;
   cursor: pointer;
-  
 
   & .text-label {
     background: rgba(37, 43, 108, 0.5);
-    background-image: url('../../images/btn-blue-lang.png');
+    background-image: url("../../images/btn-blue-lang.png");
   }
 
   &:hover {
     & .text-label {
       background-color: rgba(37, 43, 108, 0.5);
-      background-image: url('../../images/btn-blue-lang.png');
+      background-image: url("../../images/btn-blue-lang.png");
     }
   }
 
@@ -28,7 +27,7 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 14px;
-    -webkit-text-fill-color:  #4C56B2;
+    -webkit-text-fill-color: #4c56b2;
     -webkit-text-stroke-color: #000000;
     -webkit-text-stroke-width: 2px;
   }
@@ -38,11 +37,11 @@
 
     &:checked {
       & ~ .text-label {
-        -webkit-text-fill-color:  #FFFFFF;
-        -webkit-text-stroke-color: #0B6232;
+        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-color: #0b6232;
         -webkit-text-stroke-width: 1px;
-        background-color: #0B6232;
-        background-image: url('../../images/btn-green-lang.png');
+        background-color: #0b6232;
+        background-image: url("../../images/btn-green-lang.png");
       }
     }
   }
@@ -73,7 +72,7 @@
 
 .button.b2 {
   border-radius: 2px;
-  background: url('../../images/rectangle-yes_no.png');
+  background: url("../../images/rectangle-yes_no.png");
 }
 
 .checkbox {
@@ -111,7 +110,7 @@
   content: "YES";
   left: 4px;
   font-size: 11px;
-  -webkit-text-fill-color:  #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
 }
@@ -120,19 +119,20 @@
   content: "NO";
   right: 4px;
   font-size: 11px;
-  -webkit-text-fill-color:  #4C56B2;
+  -webkit-text-fill-color: #4c56b2;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
 }
 
 .switch .knobs span {
-  width: 34px;
+  height: 22px;
+  width: 36px;
   left: 50px;
-  background: url('../../images/rectangle-green.png') no-repeat;
+  background: url("../../images/rectangle-green.png") no-repeat;
   z-index: 2;
 }
 
 .switch .checkbox:checked + .knobs span {
   left: 4px;
-  background: url('../../images/rectangle-blue.png') no-repeat;
+  background: url("../../images/rectangle-blue.png") no-repeat;
 }

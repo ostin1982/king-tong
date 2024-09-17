@@ -18,8 +18,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 20px 10px 16px;
+  padding: 20px 20px 10px 16px;
   gap: 38px;
+  width: 107px;
 }
 
 .card__main_gap {
