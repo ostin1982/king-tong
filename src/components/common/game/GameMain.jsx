@@ -8,7 +8,7 @@ const GameMain = ({information}) => {
   const [visibleItems, setVisibleItems] = useState([]);
 
   useEffect(() => {
-    const initialItems = Array.from({ length: 5 }, (_, i) => information[i % information.length]);
+    const initialItems = Array.from({ length: 7 }, (_, i) => information[i % information.length]);
     setVisibleItems(initialItems);
   }, [information]);
 
@@ -26,7 +26,7 @@ const GameMain = ({information}) => {
     setTimeout(() => {
       clearInterval(interval);
       const randomStopIndex = Math.floor(Math.random() * information.length);
-      const newItems = [...Array.from({ length: 5 }, (_, i) => information[(randomStopIndex + i) % information.length])];
+      const newItems = [...Array.from({ length: 7 }, (_, i) => information[(randomStopIndex + i) % information.length])];
       setVisibleItems(newItems);
       setScrolling(false);
     }, 1000);
