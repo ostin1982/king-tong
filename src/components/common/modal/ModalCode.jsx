@@ -29,11 +29,11 @@ const ModalCode = ({active, setActive}) => {
           <form className="modal__form">
             <div className="modal__form-block">
               <div className="modal__form-input">
-                <input className="modal__input" type="text" maxlength="1" placeholder="A" onInput={event => jumpInput(event.target)}/>
-                <input className="modal__input" type="text" maxlength="1" placeholder="3" onInput={event => jumpInput(event.target)}/>
-                <input className="modal__input" type="text" maxlength="1" placeholder="5" onInput={event => jumpInput(event.target)}/>
-                <input className="modal__input" type="text" maxlength="1" placeholder="2" onInput={event => jumpInput(event.target)} />
-                <input className="modal__input" type="text" maxlength="1" placeholder="1" onInput={event => jumpInput(event.target)} />
+                <input className="modal__input" type="text" maxLength="1" placeholder="A" onInput={event => jumpInput(event.target)}/>
+                <input className="modal__input" type="text" maxLength="1" placeholder="3" onInput={event => jumpInput(event.target)}/>
+                <input className="modal__input" type="text" maxLength="1" placeholder="5" onInput={event => jumpInput(event.target)}/>
+                <input className="modal__input" type="text" maxLength="1" placeholder="2" onInput={event => jumpInput(event.target)} />
+                <input className="modal__input" type="text" maxLength="1" placeholder="1" onInput={event => jumpInput(event.target)} />
               </div>
             <p className="modal__fornm-text">you can get the activation code in our official channel or from friends</p>
             </div>

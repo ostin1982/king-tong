@@ -110,7 +110,7 @@ const GameMain = ({information}) => {
           </div>
         </div>
       </div>
-      <button className="game__spin-button" o onClick={startScrolling} disabled={scrolling}>
+      <button className="game__spin-button" onClick={startScrolling} disabled={scrolling}>
         <div className="game__spin-button-img">
           <img src={require('../../../assets/images/button.png')} alt="" className="img"/>
         </div>

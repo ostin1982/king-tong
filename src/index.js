@@ -1,14 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import App from "./components/App";
 import "./assets/styles/index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root"),
+  </StrictMode>,
 );
