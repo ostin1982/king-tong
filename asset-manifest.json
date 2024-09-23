@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/king-tong/static/css/main.b3829992.css",
-    "main.js": "/king-tong/static/js/main.c2167cd0.js",
+    "main.js": "/king-tong/static/js/main.4386395e.js",
     "static/media/egypt-back.png": "/king-tong/static/media/egypt-back.ebf1335d83cbf8d9d339.png",
     "static/media/back.png": "/king-tong/static/media/back.66abb9a347b329b0d911.png",
     "static/media/bg-modal.png": "/king-tong/static/media/bg-modal.229ace6a89a90b23c7e5.png",
@@ -16,10 +16,10 @@
     "static/media/music.svg": "/king-tong/static/media/music.c2bfd1f8df30fddbca07122186d0a2e8.svg",
     "index.html": "/king-tong/index.html",
     "main.b3829992.css.map": "/king-tong/static/css/main.b3829992.css.map",
-    "main.c2167cd0.js.map": "/king-tong/static/js/main.c2167cd0.js.map"
+    "main.4386395e.js.map": "/king-tong/static/js/main.4386395e.js.map"
   },
   "entrypoints": [
     "static/css/main.b3829992.css",
-    "static/js/main.c2167cd0.js"
+    "static/js/main.4386395e.js"
   ]
 }
