@@ -19,7 +19,8 @@ const ModalCode = ({active, setActive}) => {
   }
 
   return (
-    <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)} >
+    // <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)} >
+    <div className={active ? "modal active" : "modal"} >
       <div className="modal__card" onClick={event => event.stopPropagation()}>
         <div className="modal__bg">
           <img className="img" src={require("../../../assets/images/bg-modal.png")} alt="" />
@@ -52,7 +53,12 @@ const ModalCode = ({active, setActive}) => {
                   </Link>
                 </div>
               </div>
-              <Link className="modal__button" onClick={() => setActive(false)}>            
+              <Link className="modal__button" onClick={() => {
+                    
+                      console.log('click on button')
+                      
+                    }
+                  }>            
                 <div className="modal__back-small">
                   <img className="img" src={require("../../../assets/images/btn-green.png")} alt="back" />
                 </div>

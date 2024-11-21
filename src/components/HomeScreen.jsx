@@ -1,9 +1,13 @@
-import { memo, useState } from "react";
+import { memo, useState, useEffect } from "react";
 
 import BackMain from "./common/back/BackMain";
 import Header from "./common/Header";
 import GameBlock from "./common/game/GameBlock";
 import ModalCode from "./common/modal/ModalCode";
+import axios from 'axios'
+
+const HOST = "http://localhost:10000"
+const BASE_URL = HOST + "/api/v1"
 
 const GameCardInfo = [
   {
@@ -71,7 +75,29 @@ const GameCardInfo = [
 ];
 
 const HomeScreen = () => {
+  
   const [modalActive, setModalActive] = useState(true);
+
+  useEffect(() => {
+
+    let authDtoRequest = {
+                  data: "user=%7B%22id%22%3A308131758%2C%22first_name%22%3A%22ALEX%22%2C%22last_name%22%3A%22IVANNIKOV.PRO%22%2C%22username%22%3A%22ivannikovPro%22%2C%22language_code%22%3A%22ru%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-1857114464680496286&chat_type=private&auth_date=1716232213&hash=7d31991a605ab5e265b40ebbccc09c28bfb59366d2ac5cee9ca288c24a2ed3c3",
+                  promo: "RHCDD"
+              };
+
+    axios.post(BASE_URL + '/auth', authDtoRequest, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((response) => {
+      console.log(response);
+      if (response.data.active === true) setModalActive(false);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }, []);
 
   return (
     <main className="main" >
