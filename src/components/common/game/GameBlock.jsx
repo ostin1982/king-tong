@@ -5,7 +5,7 @@ import BoardGameLeft from "../board/BoardGameLeft";
 import BoardGameRight from "../board/BoardGameRight";
 import GameMain from "./GameMain";
 
-const GameBlock = ({items}) => {
+const GameBlock = ({items, playerData}) => {
   return (
     <div className="game">
       <div className="game__big">
@@ -65,7 +65,7 @@ const GameBlock = ({items}) => {
         </div>
       </div>
 
-    <GameMain information={items} />
+    <GameMain information={items} playerData={playerData}/>
 
     </div>
 )}

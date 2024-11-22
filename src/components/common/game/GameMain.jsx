@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import GameCard from './GameCard';
 
-const GameMain = ({information}) => {
+const GameMain = ({information, playerData}) => {
   const [scrolling, setScrolling] = useState(false);
   const [visibleItems, setVisibleItems] = useState([]);
 
@@ -38,12 +38,12 @@ const GameMain = ({information}) => {
         <div className="game__jackpot-img">
           <img src={require('../../../assets/images/crown.png')} alt="" className="img"/>
         </div>
-        <p className="game__jackpot-text">90 000 000</p>
+        <p className="game__jackpot-text">{playerData && playerData.jackpot}</p>
       </div>
       <div className="game__luck">
         <div className="game__win">
-          <p className="game_win-text">WIN</p>
-          <p className="game_win-text">124 777</p>
+          <p className="game_win-text">{playerData && playerData.win && 'WIN'}</p>
+          <p className="game_win-text">{playerData && playerData.win}</p>
         </div>
         <div className="game__wheel">
           <div className="game__wheel-cards">
