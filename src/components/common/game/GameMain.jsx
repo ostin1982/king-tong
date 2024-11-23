@@ -2,8 +2,10 @@ import { memo, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import GameCard from './GameCard';
+import axios from "axios";
+import AppConfig from "../../config/AppConfig";
 
-const GameMain = ({information}) => {
+const GameMain = ({information, playerData}) => {
   const [scrolling, setScrolling] = useState(false);
   const [visibleItems, setVisibleItems] = useState([]);
 
@@ -12,7 +14,29 @@ const GameMain = ({information}) => {
     setVisibleItems(initialItems);
   }, [information]);
 
-  const startScrolling = () => {
+  const startScrolling = async () => {
+
+    const jwtToken = localStorage.getItem('jwt-token');
+    if (jwtToken != null && jwtToken != "") {
+      let spinDtoRequest = {
+        betcoin: 0,
+        betspin: 1
+      };
+
+      try {
+        const response = await axios
+                                .post(AppConfig.BASE_URL + "/spin", spinDtoRequest,{
+                                  headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': "Bearer " + jwtToken 
+                                  }
+                                })
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
     if (scrolling) return; 
     setScrolling(true);
 
@@ -38,12 +62,12 @@ const GameMain = ({information}) => {
         <div className="game__jackpot-img">
           <img src={require('../../../assets/images/crown.png')} alt="" className="img"/>
         </div>
-        <p className="game__jackpot-text">90 000 000</p>
+        <p className="game__jackpot-text">{playerData && playerData.jackpot}</p>
       </div>
       <div className="game__luck">
         <div className="game__win">
-          <p className="game_win-text">WIN</p>
-          <p className="game_win-text">124 777</p>
+          <p className="game_win-text">{playerData && playerData.win && 'WIN'}</p>
+          <p className="game_win-text">{playerData && playerData.win}</p>
         </div>
         <div className="game__wheel">
           <div className="game__wheel-cards">

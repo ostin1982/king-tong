@@ -1,6 +1,6 @@
 import { memo } from "react"
 
-const Header = () => {
+const Header = ({playerData}) => {
   return (
     <header className="header">
       <div className="header__block header__block_right">
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-1.png")} alt="back" />
         </div>
-        <p className="header__text">12 444 555 555</p>
+        <p className="header__text">{playerData && playerData.coin}</p>
       </div>
       <div className="header__block header__block_center">
         <div className="header__back">
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-2.png")} alt="back" />
         </div>
-        <p className="header__text">555 555</p>
+        <p className="header__text">{playerData && playerData.spin}</p>
       </div>
       <div className="header__block header__block_left">
         <div className="header__back">
@@ -28,7 +28,7 @@ const Header = () => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-3.png")} alt="back" />
         </div>
-        <p className="header__text">55 555</p>
+        <p className="header__text">{playerData && playerData.ton}</p>
       </div>
     </header>
   )
