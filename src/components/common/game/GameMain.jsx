@@ -2,6 +2,8 @@ import { memo, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import GameCard from './GameCard';
+import axios from "axios";
+import AppConfig from "../../config/AppConfig";
 
 const GameMain = ({information, playerData}) => {
   const [scrolling, setScrolling] = useState(false);
@@ -12,7 +14,29 @@ const GameMain = ({information, playerData}) => {
     setVisibleItems(initialItems);
   }, [information]);
 
-  const startScrolling = () => {
+  const startScrolling = async () => {
+
+    const jwtToken = localStorage.getItem('jwt-token');
+    if (jwtToken != null && jwtToken != "") {
+      let spinDtoRequest = {
+        betcoin: 0,
+        betspin: 1
+      };
+
+      try {
+        const response = await axios
+                                .post(AppConfig.BASE_URL + "/spin", spinDtoRequest,{
+                                  headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': "Bearer " + jwtToken 
+                                  }
+                                })
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
     if (scrolling) return; 
     setScrolling(true);
 

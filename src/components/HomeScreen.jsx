@@ -136,10 +136,7 @@ const HomeScreen = () => {
                     }
             }
             setPlayerData(playerDataDto);
-            console.log("player data \"coin\" -> " + playerDataDto.coin);
-            console.log("player data \"jackpot\" -> " + playerDataDto.jackpot);
             
-
           } catch(error) {
             console.log(error)
           }  
