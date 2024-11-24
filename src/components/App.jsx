@@ -1,10 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
-import HomeScreen from './HomeScreen';
-import Quesrs from './Quesrs';
-import Codes from './Codes';
-import Store from './Store';
-import Settings from './Settings';
+import HomeScreen from "./HomeScreen";
+import Quesrs from "./Quesrs";
+import Codes from "./Codes";
+import Store from "./Store";
+import Settings from "./Settings";
 
 function App() {
   return (
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

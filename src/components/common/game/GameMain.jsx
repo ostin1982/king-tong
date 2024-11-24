@@ -1,8 +1,9 @@
 import { memo, useState, useEffect } from "react";
 import classNames from "classnames";
+import axios from "axios";
 
 import GameCard from './GameCard';
-import axios from "axios";
+
 import AppConfig from "../../config/AppConfig";
 
 const GameMain = ({information, playerData}) => {
@@ -17,7 +18,7 @@ const GameMain = ({information, playerData}) => {
   const startScrolling = async () => {
 
     const jwtToken = localStorage.getItem('jwt-token');
-    if (jwtToken != null && jwtToken != "") {
+    if (jwtToken !== null && jwtToken !== "") {
       let spinDtoRequest = {
         betcoin: 0,
         betspin: 1
@@ -25,12 +26,12 @@ const GameMain = ({information, playerData}) => {
 
       try {
         const response = await axios
-                                .post(AppConfig.BASE_URL + "/spin", spinDtoRequest,{
-                                  headers: {
-                                    'Content-Type': 'application/json',
-                                    'Authorization': "Bearer " + jwtToken 
-                                  }
-                                })
+          .post(AppConfig.BASE_URL + "/spin", spinDtoRequest,{
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': "Bearer " + jwtToken 
+            }
+          })
         console.log(response)
       } catch (error) {
         console.log(error)
@@ -56,18 +57,24 @@ const GameMain = ({information, playerData}) => {
     }, 1000);
   };
 
+
+  let date = new Date(playerData && playerData.freeSpin.timeToIncrease);
+  const hours = String(date.getUTCHours()).padStart(2, '0');
+  const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(date.getUTCMinutes()).padStart(2, '0');
+
   return(
     <div className="game__center">
       <div className="game__jackpot">
         <div className="game__jackpot-img">
           <img src={require('../../../assets/images/crown.png')} alt="" className="img"/>
         </div>
-        <p className="game__jackpot-text">{playerData && playerData.jackpot}</p>
+        <p className="game__jackpot-text">{playerData === null ? '0' : playerData && playerData.jackpot}</p>
       </div>
       <div className="game__luck">
         <div className="game__win">
-          <p className="game_win-text">{playerData && playerData.win && 'WIN'}</p>
-          <p className="game_win-text">{playerData && playerData.win}</p>
+          <p className="game_win-text">{playerData === null ? '' : playerData && playerData.win && 'WIN'}</p>
+          <p className="game_win-text">{playerData === null ? '0' : playerData && playerData.win}</p>
         </div>
         <div className="game__wheel">
           <div className="game__wheel-cards">
@@ -106,8 +113,7 @@ const GameMain = ({information, playerData}) => {
                   <img src={require('../../../assets/images/purple-lightning.png')} alt="" className="img"/>
                 </div>
                 <div className="game__data-text">
-                  <p className="game__data-title">X</p>
-                  <p className="game__data-title">1000</p>
+                  <p className="game__data-title">{playerData === null ? 'X0' : playerData && playerData.freeSpin.slot}</p>
                 </div>
               </div>
             </div>
@@ -117,20 +123,22 @@ const GameMain = ({information, playerData}) => {
               <div className="game__middle-grey">
                 <img src={require('../../../assets/images/gray-game-background.png')} alt="" className="img"/>
               </div>
-              <div className="game__middle-color" style={{left: "calc(-141px + 42*(141px/50))"}}>
+              <div 
+                className="game__middle-color" 
+                style={{left: `calc(-141px + ${playerData === null ? '0' : playerData && playerData.freeSpin.value}*(141px/${playerData === null ? '0' : playerData && playerData.freeSpin.maxValue}))`}}>
                 <img src={require('../../../assets/images/violet-game-background.png')} alt="" className="img"/>
               </div>
             </div>
             <div className="game__middle-data">
-              <p className="game__middle-text">42</p>
+              <p className="game__middle-text">{playerData === null ? '0' : playerData && playerData.freeSpin.value}</p>
               <p className="game__middle-text">/</p>
-              <p className="game__middle-text">50</p>
+              <p className="game__middle-text">{playerData === null ? '0' : playerData && playerData.freeSpin.maxValue}</p>
             </div>
           </div>
           <div className="game__bottom">
             <p className="game__bottom-text">5</p>
             <p className="game__bottom-text">spin  in</p>
-            <p className="game__bottom-text">10:33:45</p>
+            <p className="game__bottom-text">{playerData === null ? '0' : `${hours} : ${minutes} : ${seconds}`}</p>
           </div>
         </div>
       </div>

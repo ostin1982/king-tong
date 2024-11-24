@@ -11,23 +11,45 @@ services:
 
   postgres:
     image: "postgres:16.2"
-    container_name: "whell_db"
+    container_name: "db"
     restart: always
     environment:
-      POSTGRES_DB: "whell_db"
+      POSTGRES_DB: "wheel"
       POSTGRES_USER: ${DB_LOGIN}
       POSTGRES_PASSWORD: ${DB_PASS}
       PGDATA: "/var/lib/postgresql/data/pgdata"
+      SPRING_PROFILES_ACTIVE: dev
+    ports:
+      - "15434:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
 
-  spin-whell:
+  service:
     image: ${IMAGE}
+    container_name: "service"
     restart: always
+    ports:
+      - "9000:9000"
     environment:
       DB_LOGIN: ${DB_LOGIN}
       DB_PASS: ${DB_PASS}
-      SPRING_PROFILES_ACTIVE: prod
+      MINI_APP_BOT_TOKEN: ${MINI_APP_BOT_TOKEN}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_LONG_LIFE_MILLI_SEC: ${JWT_LONG_LIFE_MILLI_SEC}
+      SPRING_PROFILES_ACTIVE: dev
+
+  manager:
+    image: ${IMAGE_MANAGER}
+    container_name: "manager"
+    restart: always
+    ports:
+      - "9001:9001"
+    environment:
+      DB_LOGIN: ${DB_LOGIN}
+      DB_PASS: ${DB_PASS}
+      BOT_TOKEN: ${BOT_TOKEN}
+      SECRET: ${SECRET}
+      SPRING_PROFILES_ACTIVE: dev
 
 volumes:
   db-data:

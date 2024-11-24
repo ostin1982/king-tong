@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0A0C2050;
+  background-color: #0a0c2050;
   z-index: 101;
   display: flex;
   justify-content: center;
@@ -29,13 +29,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  gap: 62px; 
+  align-items: center;
+  gap: 62px;
 }
 
 .modal__title {
   font-size: 14px;
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 1px;
 }
@@ -68,15 +68,15 @@
   height: 50px;
   border-radius: 12px;
   border: none;
-  background: #0A0C2090;
+  background: #0a0c2090;
   text-align: center;
-  caret-color: #FFFFFF;
+  caret-color: #ffffff;
 }
 
 .modal__input[type="text"] {
   font-size: 16px;
   font-family: "Obelix Pro";
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 2px;
 }
@@ -89,12 +89,12 @@
 .modal__input::placeholder {
   font-size: 16px;
   font-family: "Obelix Pro";
-  -webkit-text-fill-color: #FFFFFF50;
+  -webkit-text-fill-color: #ffffff50;
   -webkit-text-stroke-color: #000000;
   -webkit-text-stroke-width: 2px;
 }
 
-.modal__fornm-text {
+.modal__form-text {
   font-size: 8px;
   text-align: center;
   color: #000000;
@@ -155,7 +155,7 @@
   font-size: 18px;
   font-family: "Obelix Pro";
   font-weight: bold;
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke-color: #106521;
   -webkit-text-stroke-width: 2px;
 }

@@ -10,7 +10,7 @@ const Header = ({playerData}) => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-1.png")} alt="back" />
         </div>
-        <p className="header__text">{playerData && playerData.coin}</p>
+        <p className="header__text">{playerData === null ? '0' : playerData && playerData.coin}</p>
       </div>
       <div className="header__block header__block_center">
         <div className="header__back">
@@ -19,7 +19,7 @@ const Header = ({playerData}) => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-2.png")} alt="back" />
         </div>
-        <p className="header__text">{playerData && playerData.spin}</p>
+        <p className="header__text">{playerData === null ? '0' : playerData && playerData.spin}</p>
       </div>
       <div className="header__block header__block_left">
         <div className="header__back">
@@ -28,7 +28,7 @@ const Header = ({playerData}) => {
         <div className="header__icon">
           <img className="img" src={require("../../assets/images/coin-3.png")} alt="back" />
         </div>
-        <p className="header__text">{playerData && playerData.ton}</p>
+        <p className="header__text">{playerData === null ? '0' : playerData && playerData.ton}</p>
       </div>
     </header>
   )
