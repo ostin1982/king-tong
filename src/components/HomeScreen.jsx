@@ -1,7 +1,8 @@
 import { memo, useState, useEffect } from "react";
 import axios from 'axios';
 
-import AppConfig from "./config/AppConfig";
+//import AppConfig from "./config/AppConfig";
+import AppConfigProd from "./config/AppConfigProd";
 
 import BackMain from "./common/back/BackMain";
 import Header from "./common/Header";
@@ -86,7 +87,7 @@ const HomeScreen = () => {
     const auth = async() => {
       try {
         const response = await axios
-          .post(AppConfig.BASE_URL + '/auth', authDtoRequest, {
+          .post(AppConfigProd.BASE_URL + '/auth', authDtoRequest, {
           headers: {
             'Content-Type': 'application/json'
           }
@@ -109,7 +110,7 @@ const HomeScreen = () => {
       if (jwtToken !== null && jwtToken !== "") {
         try {
           const response = await axios
-            .get(AppConfig.BASE_URL + "/spin", {
+            .get(AppConfigProd.BASE_URL + "/spin", {
             headers: {
               'Content-Type': 'application/json',
               'Authorization': "Bearer " + jwtToken 
